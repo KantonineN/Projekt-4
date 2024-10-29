@@ -107,7 +107,7 @@
     --border__radius__sm: var(--scale__100);
     --border__radius__md: var(--scale__150);
     --border__radius__lg: var(--scale__200);
-    --border__radius__full: 50%;
+    --border__radius__full: 9999px;
 
 
 
@@ -164,7 +164,6 @@
     font-family: var(--body);
     font-weight: 400;
     line-height: 24px;
-    color: var(--color__txt__primary);
 }
 
 /* Layout for pages */
@@ -246,15 +245,18 @@ header > h1 {
     max-width: 50%;
 }
 
-/* Shadows */
+/* Effects */
 .shadow__floatingbutton {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 3px var(--color__effect__shadow), 0px 4px 8px 3px rgba(0, 0, 0, 0.2);
 }
 .shadow__modal{
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 16px var(--color__effect__shadow); 
 }
 .shadow__cards{
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 4px var(--color__effect__shadow);
+}
+.transition {
+    transition: all 150ms linear;
 }
 
 
@@ -408,8 +410,11 @@ a:hover {
 
 
 /* Icons */
-svg {
+.svg {
     fill: currentColor;
+}
+.svg--outlined {
+    stroke: currentColor;
 }
 .icon--sm {
     width: 16px;
@@ -442,6 +447,9 @@ svg {
 
 
 /* Component styling */
+button {
+    cursor: pointer;
+}
 .label {
     display: inline-flex;
     padding: 0 0 4px 0;
@@ -449,9 +457,10 @@ svg {
     gap: var(--spacing__2xs--mobile);
 }
 
+/* Buttons */
 .btn {
     display: inline-flex;
-    padding: var(--spacing__2xs--mobile) var(--spacing__sm--mobile);
+    padding: var(--spacing__xs--mobile) var(--spacing__sm--mobile);
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -460,7 +469,6 @@ svg {
     gap: 12px;
     border-radius: var(--border__radius__md);
     border: 2px solid var(--color__border__brand);
-    cursor: pointer;
 }
 .btn--primary {
     background: var(--color__surface__brand);
@@ -516,6 +524,67 @@ svg {
 }
 .btn--google:focus {
     border-color: var(--color__border__focus);
+}
+.fab {
+    background: none;
+    color: var(--color__txt__primary);
+    border: none;
+    width: auto;
+    padding: var(--spacing__xs--mobile);
+}
+.fab:hover {
+    background-color: var(--color__surface__bg-dim);
+}
+.fab--icon {
+    border-radius: var(--border__radius__full);
+}
+.badge {
+    display: inline-flex;
+    padding: 0px 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border__radius__full);
+    background: var(--color__surface__error);
+    color: var(--color__txt__onerror)
+}
+/* Tab
+   Style the tab */
+.tab {
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    border: none;
+    outline: var(--border__width__md) solid var(--color__border__brand);
+    background: var(--color__surface__bg);
+    color: var(--color__txt__brand);
+}
+.tab button h6 {
+    color: currentColor;
+    margin: 0;
+}
+.tab button.left {
+    padding: var(--spacing__2xs--mobile) var(--spacing__sm--mobile);
+    border-radius: var(--border__radius__full) var(--border__radius__none) var(--border__radius__none) var(--border__radius__full);
+}
+.tab button.right {
+    padding: var(--spacing__2xs--mobile) var(--spacing__sm--mobile);
+    border-radius: var(--border__radius__none) var(--border__radius__full) var(--border__radius__full) var(--border__radius__none);
+}
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: var(--color__surface__brand);
+    color: var(--color__txt__onbrand)
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
 }
 
 
@@ -621,6 +690,9 @@ svg {
     .btn {
         padding: var(--spacing__2xs--tablet) var(--spacing__sm--tablet);
     }
+    .fab {
+        padding: var(--spacing__xs--tablet);
+    }
 }
 
 
@@ -707,6 +779,9 @@ svg {
     .btn--google {
         width: 100%;
     }
+    .fab {
+        padding: var(--spacing__xs--desktop);
+    }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -714,5 +789,4 @@ svg {
         max-width: 1200px;
         margin: auto;
     }
-}
-  
+}  
