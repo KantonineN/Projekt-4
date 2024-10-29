@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="scripts/nikka.js" defer></script>
     <script src="" defer></script>
 </head>
 <body class="col12">
@@ -82,25 +83,11 @@
         <h1>Test</h1>
     </header>
     <main class="col12 container">
-        
-        <!-- Tab links -->
-        <div class="tab col4">
-            <button class="tab_item left transition active" onclick="openScript(event, 'type1')">
-                <h6>Tab1</h6>
-            </button>
-            <button class="tab_item right transition" onclick="openCity(event, 'type2')">
-                <h6>Tab2</h6>
-            </button>
-        </div>
-        <!-- Tab content -->
-        <div id="tab1" class="tabcontent">
-            This is tab 1.
-        </div>
-        <div id="tab2" class="tabcontent">
-            This is tab 2.
-        </div>
 
-        
+        <label class="switch">
+            <input type="checkbox">
+            <span class="switch__slider transition"></span>
+        </label>
 
     </main>
     <footer></footer>
