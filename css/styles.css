@@ -522,6 +522,49 @@ svg {
 
 
 
+/* Container for checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-family: var(--body);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  
+  .checkbox-input {
+    display: none;
+  }
+  
+  /* Tilpasset checkbox-stil */
+  .checkbox-label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: var(--color__border__primary)
+    border-radius: 4px;         /* Afrundede hjørner */
+    margin-right: 10px;         /* Afstand til label */
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  /* Når checkboxen er markeret */
+  .checkbox-input:checked + .checkbox-label::before {
+    background-color: #007bff;  /* Blå baggrund */
+    border-color: #007bff;      /* Blå kant */
+  }
+  
+  .checkbox-input:checked + .checkbox-label::after {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    left: 4px;
+    top: 2px;
+  }
+
+
 
 
 
