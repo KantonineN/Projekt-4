@@ -519,54 +519,53 @@ svg {
 }
 
 
-
-
-
-/* Container for checkbox */
+/* Customize the label (the container) */
 .checkbox {
-    display: flex;
-    align-items: center;
-    font-family: var(--body);
-    font-size: 16px;
+    display: block;
+    position: relative;
     cursor: pointer;
+    font-size: 22px;
+  }
+
+  /* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--color__base__grey_1);
   }
   
+  /* When the checkbox is checked */
+  .checkbox-input:checked ~ .checkbox {
+    background-color:var(--color__color__brand1);
+  }
   
-  .checkbox-input {
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkbox-label::after {
+    content: "";
+    position: absolute;
     display: none;
   }
   
-  /* Tilpasset checkbox-stil */
-  .checkbox-label::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: var(--color__border__primary)
-    border-radius: 4px;         /* Afrundede hjørner */
-    margin-right: 10px;         /* Afstand til label */
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
+  /* Show the checkmark when checked */
+  .checkbox-input:checked ~ .checkbox-label::after {
+    display: block;
   }
   
-  /* Når checkboxen er markeret */
-  .checkbox-input:checked + .checkbox-label::before {
-    background-color: #007bff;  /* Blå baggrund */
-    border-color: #007bff;      /* Blå kant */
+  /* Style the checkmark/indicator */
+  .checkbox-label::after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: var(--color__base__white1);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
-  
-  .checkbox-input:checked + .checkbox-label::after {
-    content: "✔";
-    color: white;
-    font-size: 16px;
-    position: absolute;
-    left: 4px;
-    top: 2px;
-  }
-
-
-
-
 
 
 
