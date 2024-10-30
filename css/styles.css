@@ -521,6 +521,32 @@ svg {
 
 
 
+/* Input */
+.input {}
+
+.input--default {background-color: var(--color__surface__bg);
+  border-width: var(--border__width__lg);
+  border-style: solid;
+  border-color: var(--color__border__outer);
+  border-radius: var(--border__radius__md);}
+
+.input--error {background-color: var(--color__surface__error-light);
+    border-color: var(--color__border__error);}
+
+
+.input--success { background-color: var(--color__surface__bg);
+    border-color: var(--color__border__success);}
+
+
+    
+
+/*chips*/
+
+/*navigation:desktop*/
+
+/*bottom sheet*/
+
+/*pagination*/
 
 
 
