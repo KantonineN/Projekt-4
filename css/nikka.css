@@ -112,40 +112,17 @@
 
 
     /* Responsive layout */
-    --layout__gutter--mobile: var(--scale__600);
-    --layout__gutter--tablet: var(--scale__800);
-    --layout__gutter--desktop: var(--scale__1000);
+    --layout__gutter: var(--scale__600);
+    --layout__margin: var(--scale__400);
 
-    --layout__margin--mobile: var(--scale__400);
-    --layout__margin--tablet: var(--scale__400);
-    --layout__margin--desktop: var(--scale__1000);
-
-    --spacing__2xs--mobile: var(--scale__200);
-    --spacing__xs--mobile: var(--scale__400);
-    --spacing__sm--mobile: var(--scale__600);
-    --spacing__md--mobile: var(--scale__800);
-    --spacing__lg--mobile: var(--scale__1000);
-    --spacing__xl--mobile: var(--scale__1200);
-    --spacing__2xl--mobile: var(--scale__1400);
-    --spacing__3xl--mobile: var(--scale__1600);
-
-    --spacing__2xs--tablet: var(--scale__200);
-    --spacing__xs--tablet: var(--scale__400);
-    --spacing__sm--tablet: var(--scale__600);
-    --spacing__md--tablet: var(--scale__800);
-    --spacing__lg--tablet: var(--scale__1000);
-    --spacing__xl--tablet: var(--scale__1200);
-    --spacing__2xl--tablet: var(--scale__1400);
-    --spacing__3xl--tablet: var(--scale__1600);
-
-    --spacing__2xs--desktop: var(--scale__200);
-    --spacing__xs--desktop: var(--scale__400);
-    --spacing__sm--desktop: var(--scale__600);
-    --spacing__md--desktop: var(--scale__800);
-    --spacing__lg--desktop: var(--scale__1000);
-    --spacing__xl--desktop: var(--scale__1200);
-    --spacing__2xl--desktop: var(--scale__1400);
-    --spacing__3xl--desktop: var(--scale__1600);
+    --spacing__2xs: var(--scale__200);
+    --spacing__xs: var(--scale__400);
+    --spacing__sm: var(--scale__600);
+    --spacing__md: var(--scale__800);
+    --spacing__lg: var(--scale__1000);
+    --spacing__xl: var(--scale__1200);
+    --spacing__2xl: var(--scale__1400);
+    --spacing__3xl: var(--scale__1600);
 
 
 
@@ -181,9 +158,12 @@ body {
 }
 
 /* Layout for pages */
+main {
+    flex-direction: column;
+}
 header {
-    padding: var(--spacing__xl--mobile) var(--layout__margin--mobile);
-    gap: var(--layout__gutter--mobile);
+    padding: var(--spacing__xl) var(--layout__margin);
+    gap: var(--layout__gutter);
     background: var(--color__surface__brand);
     justify-content: center;
     align-items: flex-start;
@@ -201,15 +181,16 @@ header > h1 {
 }
 
 .container {
-    padding: var(--spacing__xl--mobile) var(--layout__margin--mobile) 0px var(--layout__margin--mobile);
-    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: var(--spacing__lg--mobile) var(--layout__gutter--mobile);
-    flex-shrink: 0;
+    /* gap: var(--spacing__lg) var(--layout__gutter); */
     align-self: stretch;
     flex-wrap: wrap;
 }
+.container__padding {
+    padding: var(--spacing__xl) var(--layout__margin) 0px var(--layout__margin);
+}
+
 
 
 
@@ -241,7 +222,7 @@ header > h1 {
 }
 .col1 {
     display: flex;
-    width: 50%;
+    min-width: 50%;
     max-width: 50%;
 }
 
@@ -447,6 +428,13 @@ a:hover {
 
 
 /* Component styling */
+    /* Making images responsive */
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Buttons */
 button {
     cursor: pointer;
 }
@@ -454,13 +442,13 @@ button {
     display: inline-flex;
     padding: 0 0 4px 0;
     align-items: center;
-    gap: var(--spacing__2xs--mobile);
+    gap: var(--spacing__2xs);
 }
 
-/* Buttons */
+    /* Buttons */
 .btn {
     display: inline-flex;
-    padding: var(--spacing__xs--mobile) var(--spacing__sm--mobile);
+    padding: var(--spacing__xs) var(--spacing__sm);
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -497,6 +485,7 @@ button {
     background: none;
     color: var(--color__txt__primary);
     border: none;
+    padding: 8px 0 !important;
 }
 .btn--transparent:focus {
     border-color: var(--color__border__focus);
@@ -526,11 +515,12 @@ button {
     border-color: var(--color__border__focus);
 }
 .fab {
+    z-index: 400;
     background: none;
     color: var(--color__txt__primary);
     border: none;
     width: auto;
-    padding: var(--spacing__xs--mobile);
+    padding: var(--spacing__xs);
 }
 .fab:hover {
     background-color: var(--color__surface__bg-dim);
@@ -548,14 +538,14 @@ button {
     color: var(--color__txt__onerror)
 }
 
-/* Tab
+    /* Tab
    Style the tab */
 .tab {
     justify-content: center;
     align-items: center;
     align-self: center;
 }
-/* Style the buttons that are used to open the tab content */
+    /* Style the buttons that are used to open the tab content */
 .tab button {
     display: flex;
     justify-content: center;
@@ -571,39 +561,46 @@ button {
     margin: 0;
 }
 .tab button.left {
-    padding: var(--spacing__2xs--mobile) var(--spacing__sm--mobile);
+    padding: var(--spacing__2xs) var(--spacing__sm);
     border-radius: var(--border__radius__full) var(--border__radius__none) var(--border__radius__none) var(--border__radius__full);
 }
 .tab button.right {
-    padding: var(--spacing__2xs--mobile) var(--spacing__sm--mobile);
+    padding: var(--spacing__2xs) var(--spacing__sm);
     border-radius: var(--border__radius__none) var(--border__radius__full) var(--border__radius__full) var(--border__radius__none);
 }
-/* Create an active/current tablink class */
+    /* Create an active/current tablink class */
 .tab button.active {
     background-color: var(--color__surface__brand);
     color: var(--color__txt__onbrand)
 }
-/* Style the tab content */
+    /* Style the tab content */
 .tabcontent {
     display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-#tab1 {display: block;}
+#tab1 {display: flex;}
 
+/* Checkboxes */
 /* Switch */
-/* The switch - the box around the slider */
-.switch {
+    /* The switch - the box around the slider */
+.switch,
+.favorite {
     position: relative;
     display: inline-block;
-    height: var(--spacing__sm--mobile);
-    width: var(--spacing__xl--mobile);
 }
-/* Hide default HTML checkbox */
-.switch input {
+    /* Hide default HTML checkbox */
+.switch input,
+.favorite input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-/* The slider */
+.switch {
+    height: var(--spacing__sm);
+    width: var(--spacing__xl);
+}
+    /* The slider */
 .switch__slider {
     position: absolute;
     cursor: pointer;
@@ -611,7 +608,6 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: var(--color__surface__container-layer2); */
     background-color: var(--color__icon__primary-variant);
     border-radius: var(--border__radius__full);
 }
@@ -629,8 +625,59 @@ input:checked + .switch__slider {
     background-color: var(--color__surface__brand);
 }
 input:checked + .switch__slider:before {
-    transform: translateX(var(--spacing__sm--mobile));
+    transform: translateX(var(--spacing__sm));
 }
+
+/* Favorite */
+.favorite {
+    color: var(--color__icon__primary);
+    cursor: pointer;
+}
+.favorite input:checked + .favorite_item {
+    color: var(--color__surface__brand);
+}
+
+/* Card */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--color__surface__container-layer1);
+}
+.card__img {
+    z-index: 0;
+    width: 100%;
+    aspect-ratio: 21/9;
+}
+.card__img > .favorite {
+    position: absolute;
+    right: var(--spacing__sm);
+    top: var(--spacing__sm);
+}
+.card__content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    padding: var(--spacing__md) var(--spacing__sm) var(--spacing__sm) var(--spacing__sm);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing__xs);
+    align-self: stretch;
+}
+.card__content > .share {
+    position: absolute;
+    right: 40px;
+    top: 0;
+    transform:translateY(-50%)
+}
+.card__content__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing__2xs);
+    align-self: stretch;
+}
+
 
 
 
@@ -645,6 +692,21 @@ input:checked + .switch__slider:before {
 
 /* Tablet menu */
 @media only screen and (min-width: 640px) {
+    :root {
+        /* Responsive layout */
+        --layout__gutter: var(--scale__800);
+        --layout__margin: var(--scale__400);
+
+        --spacing__2xs: var(--scale__200);
+        --spacing__xs: var(--scale__400);
+        --spacing__sm: var(--scale__600);
+        --spacing__md: var(--scale__800);
+        --spacing__lg: var(--scale__1000);
+        --spacing__xl: var(--scale__1200);
+        --spacing__2xl: var(--scale__1400);
+        --spacing__3xl: var(--scale__1600);
+    }
+
     /* Grids and spacings */
     .col6 {
         width: 50%;
@@ -655,15 +717,15 @@ input:checked + .switch__slider:before {
         max-width: 50%;
     }
     .col3 {
-        width: 50%;
+        column-count: 2;
         max-width: 50%;
     }
     .col2 {
-        width: 33.33%;
+        column-count: 3;
         max-width: 33.33%;
     }
     .col1 {
-        width: 25%;
+        column-count: 4;
         max-width: 25%;
     }
 
@@ -713,44 +775,6 @@ input:checked + .switch__slider:before {
         font-size: 20px;
         line-height: 24px;
     }
-
-
-
-    /* Layout for pages */
-    header {
-        padding: var(--spacing__xl--tablet) var(--layout__margin--tablet);
-        gap: var(--layout__gutter--tablet);
-    }
-    .container {
-        padding: var(--spacing__xl--tablet) var(--layout__margin--tablet) 0px var(--layout__margin--tablet);
-        gap: var(--spacing__lg--tablet) var(--layout__gutter--tablet);
-    }
-
-
-
-    /* Component styling */
-    .label {
-        gap: var(--spacing__2xs--tablet);
-    }
-    .btn {
-        padding: var(--spacing__2xs--tablet) var(--spacing__sm--tablet);
-    }
-    .fab {
-        padding: var(--spacing__xs--tablet);
-    }
-    .tab button.left {
-        padding: var(--spacing__2xs--tablet) var(--spacing__sm--tablet);
-    }
-    .tab button.right {
-        padding: var(--spacing__2xs--tablet) var(--spacing__sm--tablet);
-    }
-    .switch {
-        height: var(--spacing__sm--tablet);
-        width: var(--spacing__xl--tablet);
-    }
-    input:checked + .switch__slider:before {
-        transform: translateX(var(--spacing__sm--tablet));
-    }
 }
 
 
@@ -759,6 +783,21 @@ input:checked + .switch__slider:before {
 
 /* Desktop menu */
 @media only screen and (min-width: 960px) {
+    :root {
+        /* Responsive layout */
+        --layout__gutter: var(--scale__1000);
+        --layout__margin: var(--scale__1000);
+
+        --spacing__2xs: var(--scale__200);
+        --spacing__xs: var(--scale__400);
+        --spacing__sm: var(--scale__600);
+        --spacing__md: var(--scale__800);
+        --spacing__lg: var(--scale__1000);
+        --spacing__xl: var(--scale__1200);
+        --spacing__2xl: var(--scale__1400);
+        --spacing__3xl: var(--scale__1600);
+    }
+
     /* Grids and spacings */
     .col6 {
         width: 50%;
@@ -814,49 +853,10 @@ input:checked + .switch__slider:before {
         font-size: 22px;
         line-height: 24px;
     }
-
-
-
-    /* Layout for pages */
-    header {
-        padding: var(--spacing__xl--desktop) var(--layout__margin--desktop);
-        gap: var(--layout__gutter--desktop);
-    }
-
-
-
-    /* Component styling */
-    .label {
-        gap: var(--spacing__2xs--desktop);
-    }
-    .btn {
-        padding: var(--spacing__2xs--desktop) var(--spacing__sm--desktop);
-        width: auto;
-    }
-    .btn--facebook,
-    .btn--google {
-        width: 100%;
-    }
-    .fab {
-        padding: var(--spacing__xs--desktop);
-    }
-    .tab button.left {
-        padding: var(--spacing__2xs--desktop) var(--spacing__sm--desktop);
-    }
-    .tab button.right {
-        padding: var(--spacing__2xs--desktop) var(--spacing__sm--desktop);
-    }
-    .switch {
-        height: var(--spacing__sm--desktop);
-        width: var(--spacing__xl--desktop);
-    }
-    input:checked + .switch__slider:before {
-        transform: translateX(var(--spacing__sm--desktop));
-    }
 }
 
 @media only screen and (min-width: 1280px) {
-    main {
+    .container {
         max-width: 1200px;
         margin: auto;
     }
