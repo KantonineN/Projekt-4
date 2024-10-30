@@ -429,6 +429,86 @@ svg {
 }
 
 
+/* Chips styling */
+
+.type-filled,
+.type-filled * {
+    box-sizing: border-box; 
+}
+
+.chip-container {
+    display: flex; 
+    flex-direction: row; 
+    gap: 12px;
+}
+
+.type-filled {
+    background: var(--color-surface-brand, #f9f7f7); 
+    border-radius: 20px; 
+    padding: var(--spacing-2xs, 8px) var(--spacing-xs, 16px); 
+    display: flex; 
+    flex-direction: row; 
+    gap: 4px; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 32px; 
+    position: relative; 
+}
+
+.type-filled__label {
+    padding: 0px 0px 4px 0px; 
+    display: flex; 
+    flex-direction: row; 
+    gap: 8px; 
+    align-items: center; 
+    justify-content: flex-start; 
+    flex-shrink: 0; 
+}
+
+.type-filled__label-wrapper {
+    display: flex; 
+    flex-direction: row; 
+    gap: 0px; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    flex-shrink: 0; 
+}
+
+.type-filled__label2 {
+    color: var(--color-text-on-brand, #da291c); 
+    text-align: left; 
+    font-family: var(--text-label-small-font-family, "Lato-Regular", sans-serif); 
+    font-size: var(--text-label-small-font-size, 16px); 
+    line-height: var(--text-label-small-line-height, 20px); 
+    font-weight: var(--text-label-small-font-weight, 400); 
+}
+
+.type-filled__chip-wrapper {
+    display: flex; 
+    flex-direction: row; 
+    gap: 8px; 
+    align-items: center; 
+    justify-content: flex-start; 
+    align-self: stretch; 
+    flex-shrink: 0; 
+}
+
+.type-filled__cross {
+    flex-shrink: 0; 
+    width: var(--dimension-icon-sm, 16px); 
+    height: var(--dimension-icon-sm, 16px); 
+    position: relative; 
+    overflow: visible; 
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -518,35 +598,6 @@ svg {
     border-color: var(--color__border__focus);
 }
 
-
-
-
-/* Input */
-.input {}
-
-.input--default {background-color: var(--color__surface__bg);
-  border-width: var(--border__width__lg);
-  border-style: solid;
-  border-color: var(--color__border__outer);
-  border-radius: var(--border__radius__md);}
-
-.input--error {background-color: var(--color__surface__error-light);
-    border-color: var(--color__border__error);}
-
-
-.input--success { background-color: var(--color__surface__bg);
-    border-color: var(--color__border__success);}
-
-
-    
-
-/*chips*/
-
-/*navigation:desktop*/
-
-/*bottom sheet*/
-
-/*pagination*/
 
 
 
