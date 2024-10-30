@@ -84,7 +84,7 @@
     --color__border__primary: var(--color__base__black1);
     --color__border__brand: var(--color__color__brand1);
     --color__border__outer: var(--color__neutral__3);
-    --color__border__button: var(--color__color__brand1);
+    --color__border__btn: var(--color__color__brand1);
     --color__border__disabled: var(--color__base__grey_2);
     --color__border__focus: var(--color__base__black1);
     --color__border__inner: var(--color__base__grey_2);
@@ -181,6 +181,7 @@ header > h1 {
 }
 
 .container {
+    display:flex;
     align-items: flex-start;
     justify-content: flex-start;
     /* gap: var(--spacing__lg) var(--layout__gutter); */
@@ -227,7 +228,7 @@ header > h1 {
 }
 
 /* Effects */
-.shadow__floatingbutton {
+.shadow__floatingbtn {
     box-shadow: 0px 1px 3px var(--color__effect__shadow), 0px 4px 8px 3px rgba(0, 0, 0, 0.2);
 }
 .shadow__modal{
@@ -326,7 +327,10 @@ p {
 
 .txt--bold {
     font-weight: 700;
-}   
+}
+.txt--uppercase {
+    text-transform: uppercase;
+}  
 
 h1 {
     font-size: 32px;
@@ -391,12 +395,6 @@ a:hover {
 
 
 /* Icons */
-.svg {
-    fill: currentColor;
-}
-.svg--outlined {
-    stroke: currentColor;
-}
 .icon--sm {
     width: 16px;
     height: 16px;
@@ -515,7 +513,7 @@ button {
     border-color: var(--color__border__focus);
 }
 .fab {
-    z-index: 400;
+    z-index: 60;
     background: none;
     color: var(--color__txt__primary);
     border: none;
@@ -858,6 +856,8 @@ input:checked + .switch__slider:before {
 @media only screen and (min-width: 1280px) {
     .container {
         max-width: 1200px;
+    }
+    main.container {
         margin: auto;
     }
 }  

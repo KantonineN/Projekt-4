@@ -1,47 +1,208 @@
-/* Customize the label (the container) */
-.checkbox {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-  }
+@charset "UTF-8";
+/* CSS dokument */
 
-  /* Create a custom checkbox */
+.checkbox_group {
+  flex-direction: column;
+  position: relative;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding: 0 0 0 35px;
+  cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+/* Create a custom checkbox */
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: var(--color__base__grey_1);
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: var(--color__surface__bg);
+  border: var(--border__width__md) solid var(--color__border__primary);
+  border-radius: var(--border__radius__sm);
+}
+
+/* When the checkbox is checked, add brand color background */
+.checkbox_group input:checked ~ .checkmark {
+  background-color: var(--color__surface__brand);
+  border-color: var(--color__border__brand);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--color__icon__inverted);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Side sheet */
+.side_sheet {
+  position: absolute;
+  height: 100%; /* 100% Full-height */
+  width: 75%; /* changes depending on device */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: var(--color__surface__container-layer1);
+  overflow-x: hidden; /* Disable horizontal scroll */
+
+  display: flex;
+  padding: var(--spacing__sm) 0;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 300ms ease-out; /* 0.3 second transition effect to slide in the sidenav */
+}
+.side_sheet__move {
+  transform: translateX(calc(100%));
+}
+.side_sheet__header {
+  display: flex;
+  padding: var(--spacing__xs);
+  align-items: flex-start;
+  align-self: stretch;
+  justify-content: space-between;
+}
+.side_sheet__header svg {
+  cursor: pointer;
+}
+.side_sheet__content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: -1px;
+  flex: 1 0 0;
+}
+.side_sheet__footer {
+  display: flex;
+  padding: 0px var(--spacing__xs);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Overlay */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color__effect__scrim);
+  z-index: 80; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+/* Accordion */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  border-top: var(--border__width__sm) solid var(--color__border__inner);
+  border-bottom: var(--border__width__sm) solid var(--color__border__inner);
+  border-left: none;
+  border-right: none;
+  width: 100%;
+}
+.accordion__btn {
+  display: flex;
+  width: 100%;
+  border: none;
+  border-bottom: var(--border__width__sm) solid #c9c9c9;
+  padding: var(--spacing__2xs) var(--spacing__xs);
+  text-align: left;
+  cursor: pointer;
+  justify-content: space-between;
+  margin-bottom: -1px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: var(--color__surface__container-layer2);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.accordion__panel {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+.accordion__panel__item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: var(--spacing__xs);
+  width: 100%;
+}
+
+
+
+.filter__btn {
+  padding: var(--spacing__2xs) var(--spacing__sm);
+  border-radius: var(--border__radius__full);
+  width: 100%;
+  align-self: flex-end;
+}
+
+
+
+
+
+
+/* Tablet menu */
+@media only screen and (min-width: 640px) {
+  .filter__btn {
+    width: 100%;
   }
-  
-  /* When the checkbox is checked */
-  .checkbox-input:checked ~ .checkbox {
-    background-color:var(--color__color__brand1);
+  .side_sheet {
+    width: 50%;
   }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkbox-label::after {
-    content: "";
-    position: absolute;
-    display: none;
+}
+
+/* Desktop menu */
+@media only screen and (min-width: 960px) {
+  .filter__btn {
+    width: auto;
   }
-  
-  /* Show the checkmark when checked */
-  .checkbox-input:checked ~ .checkbox-label::after {
-    display: block;
+  .side_sheet {
+    width: 25%;
   }
-  
-  /* Style the checkmark/indicator */
-  .checkbox-label::after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: var(--color__base__white1);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+}
+
+@media only screen and (min-width: 1280px) {
+  .side_sheet {
+    width: 20%
   }
+}
