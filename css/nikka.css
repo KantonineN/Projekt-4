@@ -184,7 +184,7 @@ header > h1 {
     display:flex;
     align-items: flex-start;
     justify-content: flex-start;
-    /* gap: var(--spacing__lg) var(--layout__gutter); */
+    gap: var(--spacing__lg) var(--layout__gutter);
     align-self: stretch;
     flex-wrap: wrap;
 }
@@ -208,7 +208,7 @@ header > h1 {
 }
 .col4 {
     display: flex;
-    width: 100%;
+    flex: 1 1 250px;
     max-width: 100%;
 }
 .col3 {
@@ -539,9 +539,11 @@ button {
     /* Tab
    Style the tab */
 .tab {
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    align-items: start;
     align-self: center;
+    flex: 1 0 0 !important;
+    width: 100%;
 }
     /* Style the buttons that are used to open the tab content */
 .tab button {
@@ -711,7 +713,7 @@ input:checked + .switch__slider:before {
         max-width: 50%;
     }
     .col4 {
-        width: 50%;
+        flex: 1 1 250px;
         max-width: 50%;
     }
     .col3 {
@@ -802,7 +804,7 @@ input:checked + .switch__slider:before {
         max-width: 50%;
     }
     .col4 {
-        width: 33.33%;
+        flex: 1 1 250px;
         max-width: 33.33%;
     }
     .col3 {

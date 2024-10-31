@@ -100,220 +100,228 @@
                 </symbol>
                 <symbol id="chevron-down" viewBox="0 0 32 32">
                     <path d="M7.60928 12.9476C7.08857 13.4683 7.08857 14.3125 7.60928 14.8332L14.1322 21.3497C15.1738 22.3903 16.8615 22.3899 17.9026 21.3489L24.423 14.8284C24.9438 14.3077 24.9438 13.4635 24.423 12.9428C23.9023 12.4221 23.0581 12.4221 22.5374 12.9428L16.9566 18.5236C16.4359 19.0444 15.5917 19.0443 15.071 18.5236L9.49489 12.9476C8.9742 12.4269 8.12997 12.4269 7.60928 12.9476Z" fill="currentColor"/>
-                </symbol>  
+                </symbol>
+                <symbol id="chevron-left-double" viewBox="0 -1 20 20">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7071 8.2929C12.0976 8.6834 12.0976 9.3166 11.7071 9.7071C11.3166 10.0976 10.6834 10.0976 10.2929 9.7071L6.2929 5.7071C5.9024 5.3166 5.9024 4.6834 6.2929 4.2929L10.2929 0.29289C10.6834 -0.09763 11.3166 -0.09763 11.7071 0.29289C12.0976 0.68342 12.0976 1.31658 11.7071 1.70711L8.4142 5L11.7071 8.2929zM5.7071 8.2929C6.0976 8.6834 6.0976 9.3166 5.7071 9.7071C5.3166 10.0976 4.6834 10.0976 4.2929 9.7071L0.29289 5.7071C-0.09763 5.3166 -0.09763 4.6834 0.29289 4.2929L4.2929 0.29289C4.6834 -0.09763 5.3166 -0.09763 5.7071 0.29289C6.0976 0.68342 6.0976 1.31658 5.7071 1.70711L2.41421 5L5.7071 8.2929z" fill="#currentColor"></path>
+                    </g>
+                </symbol>
             </svg>
         </div>
                     
         <h1>Aktiviteter</h1>
     </header>
     <main class="col12 container container__padding">
-
-        <button class="btn  btn--primary txt__body__lg txt--uppercase transition filter__btn" onclick="openFilter()">
-            <svg class="icon--md filter__svg" focusable="false" aria-hidden="true"><use xlink:href="#filter"></use></svg>
-             Filter
-        </button>
-        <div id="overlay" onclick="closeFilter()"></div>
-
-        <div id="side_sheet" class="side_sheet shadow__modal side_sheet__move">
-            <div class="side_sheet__header">
-                <h4>Side sheet</h4>
-                <svg class="icon--md icon-svg" focusable="false" aria-hidden="true" onclick="closeFilter()"><use xlink:href="#cross"></use></svg>
+        <div class="container filter">
+            <button class="btn  btn--primary txt__body__lg txt--uppercase transition filter__btn" onclick="openFilter()">
+                <svg class="icon--md" focusable="false" aria-hidden="true"><use xlink:href="#filter"></use></svg>
+                Filter
+            </button>
+            <div id="overlay" onclick="closeFilter()"></div>
+            <div id="side_sheet" class="side_sheet shadow__modal side_sheet__move">
+                <div class="side_sheet__header">
+                    <h4>Side sheet</h4>
+                    <svg class="icon--md icon-svg" focusable="false" aria-hidden="true" onclick="closeFilter()"><use xlink:href="#cross"></use></svg>
+                </div>
+                <div class="side_sheet__content">
+                    <div class="accordion">
+                        <button class="accordion__btn transition">
+                            <label class="label txt__label__md" for="item2">Vælg lokation</label>
+                            <svg class="icon--md icon-svg accordion__icon transition" focusable="false" aria-hidden="true"><use xlink:href="#chevron-left-double"></use></svg>
+                        </button>
+                        <div class="accordion__panel transition">
+                            <div class="accordion__panel__item">
+                                <div class="container checkbox_group">
+                                    <label class="checkbox txt__body__md">
+                                        Fyn
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Sjælland
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Nordjylland
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Midtjylland
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Østjylland
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Vestjylland
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Sønderjylland
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        København
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Lolland
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Falster
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion__btn transition">
+                            <label class="label txt__label__md" for="item3">Vælg interesser</label>
+                            <svg class="icon--md icon-svg accordion__icon transition" focusable="false" aria-hidden="true"><use xlink:href="#chevron-down"></use></svg>
+                        </button>
+                        <div class="accordion__panel transition">
+                            <div class="accordion__panel__item">
+                                <div class="container checkbox_group">
+                                    <label class="checkbox txt__body__md">
+                                        Lejre
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Lektiehjælp
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Flygtningestøtte
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Indsamling
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Butikker
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Familie oplevelser
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Naturklubber
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Småbørnsklubber
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Foreningsarbejde
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion__btn transition">
+                            <label class="label txt__label__md" for="item3">Vælg aldersgruppe</label>
+                            <svg class="icon--md icon-svg accordion__icon transition" focusable="false" aria-hidden="true"><use xlink:href="#chevron-down"></use></svg>
+                        </button>
+                        <div class="accordion__panel transition">
+                            <div class="accordion__panel__item">
+                                <div class="container checkbox_group">
+                                    <label class="checkbox txt__body__md">
+                                        Under 6 år
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        6-12 år
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        13-17 år
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        18+ år
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion__btn transition">
+                            <label class="label txt__label__md" for="item3">Vælg varighed</label>
+                            <svg class="icon--md icon-svg accordion__icon transition" focusable="false" aria-hidden="true"><use xlink:href="#chevron-down"></use></svg>
+                        </button>
+                        <div class="accordion__panel transition">
+                            <div class="accordion__panel__item">
+                                <div class="container checkbox_group">
+                                    <label class="checkbox txt__body__md">
+                                        2 timer eller mindre
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        3-5 timer
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Dags events
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        Weekend events
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox txt__body__md">
+                                        2+ dage
+                                        <input id="checkboxID" type="checkbox" value="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side_sheet__footer">
+                    <button class="btn  btn--primary txt__btn transition">
+                        Tilføj filter
+                    </button>
+                </div>
             </div>
-            <div class="side_sheet__content">
-                <div class="accordion">
-                    <button class="accordion__btn transition">
-                        <label class="label txt__label__md" for="item2">Vælg lokation</label>
-                        <svg class="icon--md icon-svg accordion__icon transition" focusable="false" aria-hidden="true"><use xlink:href="#chevron-down"></use></svg>
-                    </button>
-                    <div class="accordion__panel transition">
-                        <div class="accordion__panel__item">
-                            <div class="container checkbox_group">
-                                <label class="checkbox txt__body__md">
-                                    Fyn
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Sjælland
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Nordjylland
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Midtjylland
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Østjylland
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Vestjylland
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Sønderjylland
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    København
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Lolland
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Falster
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <button class="accordion__btn transition">
-                        <label class="label txt__label__md" for="item3">Vælg interesser</label>
-                        <svg class="icon--md icon-svg accordion__icon transition" focusable="false" aria-hidden="true"><use xlink:href="#chevron-down"></use></svg>
-                    </button>
-                    <div class="accordion__panel transition">
-                        <div class="accordion__panel__item">
-                            <div class="container checkbox_group">
-                                <label class="checkbox txt__body__md">
-                                    Lejre
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Lektiehjælp
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Flygtningestøtte
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Indsamling
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Butikker
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Familie oplevelser
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Naturklubber
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Småbørnsklubber
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Foreningsarbejde
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <button class="accordion__btn transition">
-                        <label class="label txt__label__md" for="item3">Vælg aldersgruppe</label>
-                        <svg class="icon--md icon-svg accordion__icon transition" focusable="false" aria-hidden="true"><use xlink:href="#chevron-down"></use></svg>
-                    </button>
-                    <div class="accordion__panel transition">
-                        <div class="accordion__panel__item">
-                            <div class="container checkbox_group">
-                                <label class="checkbox txt__body__md">
-                                    Under 6 år
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    6-12 år
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    13-17 år
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    18+ år
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <button class="accordion__btn transition">
-                        <label class="label txt__label__md" for="item3">Vælg varighed</label>
-                        <svg class="icon--md icon-svg accordion__icon transition" focusable="false" aria-hidden="true"><use xlink:href="#chevron-down"></use></svg>
-                    </button>
-                    <div class="accordion__panel transition">
-                        <div class="accordion__panel__item">
-                            <div class="container checkbox_group">
-                                <label class="checkbox txt__body__md">
-                                    2 timer eller mindre
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    3-5 timer
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Dags events
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    Weekend events
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="checkbox txt__body__md">
-                                    2+ dage
-                                    <input id="checkboxID" type="checkbox" value="">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="side_sheet__footer">
-                <button class="btn  btn--primary txt__btn transition">
-                    Tekst
-                </button>
-            </div>
+            <!-- Chips -->
         </div>
 
 
