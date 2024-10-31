@@ -435,13 +435,17 @@ svg {
     box-sizing: border-box; 
 }
 
+/* Chip Container */
 .chip-container {
     display: flex; 
     flex-direction: row; 
-    gap: 12px;
+    gap: 12px; 
     position: relative; 
     top: 100px; 
     left: 40px; 
+    border: 2px solid red; 
+    border-radius: 5px; 
+    padding: 10px; 
 }
 
 .type-filled {
@@ -633,9 +637,8 @@ svg {
 
 
 
-
-
 /*Bottom sheet*/
+
 
 
 
@@ -647,7 +650,7 @@ body {
 
 .navigation {
     width: 100%;
-    height: auto;
+    height: 50px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -655,7 +658,9 @@ body {
     overflow: hidden;
     background-image: url("../assets/navigation.webp");
     background-repeat: no-repeat;
-    background-size: fill;
+    background-size: contain;
+    background-size: auto auto;
+    background-position: center center;
 }
 
 .navigation img {
