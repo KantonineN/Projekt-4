@@ -558,6 +558,7 @@ svg {
   flex-shrink: 0; 
   width: 32px; 
   height: 32px; 
+
 }
 
 /* Pagination Icon styles */
@@ -635,6 +636,42 @@ svg {
 
 
 /*Bottom sheet*/
+
+
+
+/*Navigation for desktop*/
+
+body {
+    margin: 0;
+}
+
+.navigation {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../assets/navigation.webp");
+    background-repeat: no-repeat;
+    background-size: fill;
+}
+
+.navigation img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
 
 
 

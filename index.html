@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <script src="" defer></script>
 </head>
-<body class="col12">
-    <header  class="col12">
+<body>
+    <header class="responsive-image">
         <div class="hide">
             <!-- store icons - not visible inside the HTML file -->
             <svg fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,54 +59,105 @@
                         </clipPath>
                     </defs>
                 </symbol>
-                    
-                    
-
+                <symbol id="chevron-left-double" viewBox="0 0 32 32">
+                    <path d="M24 22.6666L17.3333 15.9999L24 9.33325" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 22.6666L5.33333 15.9999L12 9.33325" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </symbol>
+                <symbol id="chevron-right" viewBox="0 0 32 32">
+                    <path d="M12.9471 24.3906C13.4678 24.9113 14.312 24.9113 14.8327 24.3906L21.3492 17.8675C22.3898 16.8261 22.3894 15.1383 21.3484 14.0973L14.8279 7.5768C14.3072 7.05611 13.463 7.05611 12.9423 7.5768C12.4216 8.09751 12.4216 8.94172 12.9423 9.46243L18.5231 15.0433C19.0439 15.5639 19.0439 16.4082 18.5231 16.9289L12.9471 22.505C12.4264 23.0257 12.4264 23.8698 12.9471 24.3906Z" fill="#2E2E2E"/>
+                </symbol>
+                <symbol id="chevron-left" viewBox="0 0 32 32">
+                    <path d="M19.0524 7.60952C18.5317 7.08882 17.6876 7.08882 17.1668 7.60952L10.6502 14.1325C9.60972 15.1741 9.61013 16.8618 10.6512 17.9028L17.1716 24.4233C17.6924 24.944 18.5365 24.944 19.0573 24.4233C19.578 23.9026 19.578 23.0584 19.0573 22.5377L13.4764 16.9568C12.9557 16.4361 12.9557 15.592 13.4764 15.0712L19.0524 9.49514C19.5732 8.97444 19.5732 8.13022 19.0524 7.60952Z" fill="#2E2E2E"/>
+                </symbol>
+                <symbol id="chevron-right-double" viewBox="0 0 32 32">
+                    <path d="M8 22.6666L14.6667 15.9999L8 9.33325M17.3333 22.6666L24 15.9999L17.3333 9.33325" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </symbol>
+                <symbol id="cross-icon" viewBox="0 0 32 32">
+                    <path d="M5.42023 24.5508C4.85992 25.1111 4.85992 26.0194 5.42023 26.5798C5.98055 27.1401 6.88902 27.1401 7.44933 26.5798L5.42023 24.5508ZM17.0145 17.0145C17.5748 16.4542 17.5748 15.5459 17.0145 14.9855C16.4542 14.4252 15.5459 14.4252 14.9855 14.9855L17.0145 17.0145ZM14.9855 14.9855C14.4252 15.5459 14.4252 16.4542 14.9855 17.0145C15.5459 17.5748 16.4542 17.5748 17.0145 17.0145L14.9855 14.9855ZM26.5798 7.44933C27.1401 6.88902 27.1401 5.98055 26.5798 5.42023C26.0194 4.85992 25.1111 4.85992 24.5508 5.42023L26.5798 7.44933ZM17.0145 14.9855C16.4542 14.4252 15.5459 14.4252 14.9855 14.9855C14.4252 15.5459 14.4252 16.4542 14.9855 17.0145L17.0145 14.9855ZM24.5508 26.5798C25.1111 27.1401 26.0194 27.1401 26.5798 26.5798C27.1401 26.0194 27.1401 25.1111 26.5798 24.5508L24.5508 26.5798ZM14.9855 17.0145C15.5459 17.5748 16.4542 17.5748 17.0145 17.0145C17.5748 16.4542 17.5748 15.5459 17.0145 14.9855L14.9855 17.0145ZM7.44933 5.42023C6.88902 4.85992 5.98055 4.85992 5.42023 5.42023C4.85992 5.98055 4.85992 6.88902 5.42023 7.44933L7.44933 5.42023ZM7.44933 26.5798L17.0145 17.0145L14.9855 14.9855L5.42023 24.5508L7.44933 26.5798ZM17.0145 17.0145L26.5798 7.44933L24.5508 5.42023L14.9855 14.9855L17.0145 17.0145ZM14.9855 17.0145L24.5508 26.5798L26.5798 24.5508L17.0145 14.9855L14.9855 17.0145ZM17.0145 14.9855L7.44933 5.42023L5.42023 7.44933L14.9855 17.0145L17.0145 14.9855Z" fill="#2E2E2E"/>
+                </symbol>
+                
             </svg>
         </div>
-        <body>
-            <div class="container">
-                <div class="chip-container">
-                    <div class="chip type-filled">
-                        <div class="type-filled__label">
-                            <div class="type-filled__label-wrapper">
-                                <div class="type-filled__label2">Chip 1</div>
-                            </div>
-                        </div>
-                        <div class="type-filled__chip-wrapper">
-                            <img class="type-filled__cross" src="cross.svg"/>
-                        </div>
-                    </div>
-                    <div class="chip type-filled">
-                        <div class="type-filled__label">
-                            <div class="type-filled__label-wrapper">
-                                <div class="type-filled__label2">Chip 2</div>
-                            </div>
-                        </div>
-                        <div class="type-filled__chip-wrapper">
-                            <img class="type-filled__cross" src="cross.svg"/>
+        <div class="navigation">
+            <!-- <img src="assets/navigation.webp" alt="Navigation Image"> -->
+        </div>
+    </header>
+    <main class="col12 container">
+        <div class="container">
+            <div class="chip-container">
+                <div class="chip type-filled">
+                    <div class="type-filled__label">
+                        <div class="type-filled__label-wrapper">
+                            <div class="type-filled__label2">Label 1</div>
                         </div>
                     </div>
-                    <div class="chip type-filled">
-                        <div class="type-filled__label">
-                            <div class="type-filled__label-wrapper">
-                                <div class="type-filled__label2">Chip 3</div>
-                            </div>
+                    <div class="type-filled__chip-wrapper">
+                        <use href="#cross-icon" />
+                    </div>
+                </div>
+                <div class="chip type-filled">
+                    <div class="type-filled__label">
+                        <div class="type-filled__label-wrapper">
+                            <div class="type-filled__label2">Label 2</div>
                         </div>
-                        <div class="type-filled__chip-wrapper">
-                            <img class="type-filled__cross" src="cross.svg"  />
+                    </div>
+                    <div class="type-filled__chip-wrapper">
+                        <use href="#cross-icon" />
+                    </div>
+                </div>
+                <div class="chip type-filled">
+                    <div class="type-filled__label">
+                        <div class="type-filled__label-wrapper">
+                            <div class="type-filled__label2">Label 3</div>
                         </div>
+                    </div>
+                    <div class="type-filled__chip-wrapper">
+                        <use href="#cross-icon" />
                     </div>
                 </div>
             </div>
-            
-            
+        </div>
+        <div class="pagination-container">
+            <div class="pagination">
+                <div class="pagination__pagination-control">
+                    <svg class="pagination__chevron-left-double">
+                        <use href="#chevron-left-double"></use>
+                    </svg>
+                </div>
+                <div class="pagination__pagination-control">
+                    <svg class="pagination__chevron-left">
+                        <use href="#chevron-left"></use>
+                    </svg>
+                </div>
+                <div class="pagination__pagination-page pagination__pagination-page1">
+                    <div class="pagination__number">1</div>
+                </div>
+                <div class="pagination__pagination-page pagination__pagination-page2">
+                    <div class="pagination__number">2</div>
+                </div>
+                <div class="pagination__pagination-page pagination__pagination-page2">
+                    <div class="pagination__number">3</div>
+                </div>
+                <div class="pagination__pagination-page pagination__pagination-page3">
+                    <div class="pagination__number">...</div>
+                </div>
+                <div class="pagination__pagination-page pagination__pagination-page2">
+                    <div class="pagination__number">10</div>
+                </div>
+                <div class="pagination__pagination-control">
+                    <svg class="pagination__chevron-right">
+                        <use href="#chevron-right"></use>
+                    </svg>
+                </div>
+                <div class="pagination__pagination-control">
+                    <svg class="pagination__chevron-right-double">
+                        <use href="#chevron-right-double"></use>
+                    </svg>
+                </div>
             </div>
-        </body>
-              
-        <h1>Test</h1>
-    </header>
-    <main class="col12 container">
+        </div>
+        
+        </div>
         <p>Body</p>
         <svg class="icon--sm"><use href="#arrow-left"/></svg>
         <button class="btn  btn--google txt__body__lg">
@@ -114,6 +165,7 @@
              Log ind med Facebook
      </button>
     </main>
+      
     <footer></footer>
 </body>
 </html>
