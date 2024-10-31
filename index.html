@@ -10,9 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <script src="" defer></script>
+    <script src="js/script.js" defer></script>
+
 </head>
 <body>
-    <header class="responsive-image">
+    <header class="responsive">
         <div class="hide">
             <!-- store icons - not visible inside the HTML file -->
             <svg fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,9 +74,10 @@
                 <symbol id="chevron-right-double" viewBox="0 0 32 32">
                     <path d="M8 22.6666L14.6667 15.9999L8 9.33325M17.3333 22.6666L24 15.9999L17.3333 9.33325" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </symbol>
-                <symbol id="cross-icon" viewBox="0 0 32 32">
-                    <path d="M5.42023 24.5508C4.85992 25.1111 4.85992 26.0194 5.42023 26.5798C5.98055 27.1401 6.88902 27.1401 7.44933 26.5798L5.42023 24.5508ZM17.0145 17.0145C17.5748 16.4542 17.5748 15.5459 17.0145 14.9855C16.4542 14.4252 15.5459 14.4252 14.9855 14.9855L17.0145 17.0145ZM14.9855 14.9855C14.4252 15.5459 14.4252 16.4542 14.9855 17.0145C15.5459 17.5748 16.4542 17.5748 17.0145 17.0145L14.9855 14.9855ZM26.5798 7.44933C27.1401 6.88902 27.1401 5.98055 26.5798 5.42023C26.0194 4.85992 25.1111 4.85992 24.5508 5.42023L26.5798 7.44933ZM17.0145 14.9855C16.4542 14.4252 15.5459 14.4252 14.9855 14.9855C14.4252 15.5459 14.4252 16.4542 14.9855 17.0145L17.0145 14.9855ZM24.5508 26.5798C25.1111 27.1401 26.0194 27.1401 26.5798 26.5798C27.1401 26.0194 27.1401 25.1111 26.5798 24.5508L24.5508 26.5798ZM14.9855 17.0145C15.5459 17.5748 16.4542 17.5748 17.0145 17.0145C17.5748 16.4542 17.5748 15.5459 17.0145 14.9855L14.9855 17.0145ZM7.44933 5.42023C6.88902 4.85992 5.98055 4.85992 5.42023 5.42023C4.85992 5.98055 4.85992 6.88902 5.42023 7.44933L7.44933 5.42023ZM7.44933 26.5798L17.0145 17.0145L14.9855 14.9855L5.42023 24.5508L7.44933 26.5798ZM17.0145 17.0145L26.5798 7.44933L24.5508 5.42023L14.9855 14.9855L17.0145 17.0145ZM14.9855 17.0145L24.5508 26.5798L26.5798 24.5508L17.0145 14.9855L14.9855 17.0145ZM17.0145 14.9855L7.44933 5.42023L5.42023 7.44933L14.9855 17.0145L17.0145 14.9855Z" fill="#2E2E2E"/>
-                </symbol>
+                    <symbol id="cross" viewBox="0 0 32 32">
+                        <path d="M4 4L28 28M4 28L28 4" stroke="#2E2E2E" stroke-width="2" />
+                    </symbol>
+                
                 
             </svg>
         </div>
@@ -83,6 +86,8 @@
         </div>
     </header>
     <main class="col12 container">
+       
+        
         <div class="container">
             <div class="chip-container">
                 <div class="chip type-filled">
@@ -92,7 +97,7 @@
                         </div>
                     </div>
                     <div class="type-filled__chip-wrapper">
-                        <use href="#cross-icon" />
+                        <use href="#cross" />
                     </div>
                 </div>
                 <div class="chip type-filled">
@@ -102,7 +107,7 @@
                         </div>
                     </div>
                     <div class="type-filled__chip-wrapper">
-                        <use href="#cross-icon" />
+                        <use href="#cross" />
                     </div>
                 </div>
                 <div class="chip type-filled">
@@ -112,7 +117,7 @@
                         </div>
                     </div>
                     <div class="type-filled__chip-wrapper">
-                        <use href="#cross-icon" />
+                        <use href="#cross" />
                     </div>
                 </div>
             </div>
