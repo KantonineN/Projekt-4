@@ -71,16 +71,9 @@
 
 /* Pagination */
 
-.pagination-wrapper{
-    display:flex;
-    justify-self: center;
-    width: var(--scale__800);
-    position: relative;
-    padding: var(--spacing__sm);
-}
 
 .pagination__container {
-  position: fixed; 
+  position: flex; 
   bottom: 0; 
   left: 0; 
   right: 0;
@@ -176,12 +169,14 @@ display: flex;
 /*Navigation for desktop*/
 .navigation {
     width: 100%;
-    height: 50px;
+    height: 100px;
     padding: 0;
     overflow: hidden;
-    background-image: url("../assets/navigation.webp");
+    background-image: url("image/navigation.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-size: auto auto;
     background-position: center center;
+    border-bottom: var(--border__width__md) solid var(--color__border__outer); 
+    box-shadow: 0 var(--scale__25) var(--scale__50) var(--color__effect__shadow); 
 }
