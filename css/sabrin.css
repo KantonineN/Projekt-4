@@ -1,0 +1,165 @@
+/* Chip Container */
+.chip-container {
+    display: flex; 
+    flex-direction: row; 
+    gap: 12px; 
+    position: flex; 
+    top: 20px; 
+    left: 0; 
+    border-radius: 5px; 
+    padding: 10px; 
+}
+
+.chip__filled {
+    background: var(--color-surface-brand, #DA291C);
+    border: 2px solid var(--color-border-primary, #da291c); 
+    border-radius: 20px; 
+    padding: 4px 8px;
+    display: flex; 
+    flex-direction: row; 
+    gap: 4px; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 32px; 
+}
+
+
+/* Label styling */
+.chip__filled__label {
+    padding: 0px 0px 4px 0px; 
+    display: flex; 
+    flex-direction: row; 
+    gap: 8px; 
+    align-items: center; 
+    justify-content: flex-start; 
+    flex-shrink: 0; 
+}
+
+/* Label wrapper styling */
+.chip__filled__label__wrapper {
+    flex-direction: row;
+}
+
+/* Label 2 styling */
+.chip__filled__label2 {
+    color: var(--color__txt__on_brand); 
+    text-align: left; 
+}
+
+/* Hover effekt for chip */
+.chip__filled:hover {
+    background: var(--color__surface__brand); 
+    border: 2px solid var(--color__border__primary);
+}
+
+/*Hover effekt for indhold af chip*/
+.chip__filled:hover .chip__filled__label2,
+.chip__filled:hover { 
+    color: var(--color__txt__primary);
+}
+
+
+
+/* Chip wrapper styling */
+.type-filled__chip-wrapper {
+    flex-direction: row; 
+    gap: 8px; 
+    align-items: center;
+}
+
+
+
+
+/* Pagination */
+
+
+.pagination__container {
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  background-color: var(--color__surface__bg);
+  justify-content: center; 
+  z-index: 70; 
+}
+
+/* Pagination flexbox */
+.pagination {
+  align-items: center; 
+}
+
+/* Pagination controls */
+.pagination__pagination__control {
+  background: var(--color__surface__container-layer1); 
+  border-radius: var(--border__radius__full);
+  align-items: center; 
+  justify-content: center;
+  width: 32px; 
+  height: 32px; 
+
+}
+
+/* Pagination text styles */
+.pagination__number {
+    color: var(--color__txt__primary); 
+    text-align: center;
+}
+
+/* Pagination page numbers */
+.pagination__pagination-page {
+  background: var(--color__surface__container-layer1); 
+  border-radius: var(--border__radius__full);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-shrink: 0; 
+  width: 32px; 
+  height: 32px; 
+}
+
+/* Hover effects for pagination pages */
+.pagination__pagination-page:hover {
+  background: var(--color__surface__brand); 
+}
+
+.pagination__pagination-page:hover .pagination__number {
+  color: var(--color__txt__inverted); 
+}
+
+/* Hover effect to icons */
+.pagination__pagination-control:hover {
+  background: var(--color__surface__brand); 
+}
+
+
+/* Other pagination styles */
+.pagination__number {
+  color: var(--color__txt__primary); 
+}
+
+.pagination__pagination-page3 {
+  background: var(--color__surface__container-layer1); 
+  border-radius: var(--border__radius__sm); 
+  padding: var(--spacing__xs--desktop); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-shrink: 0; 
+  width: 32px; 
+  height: 32px; 
+}
+
+
+
+/*Navigation for desktop*/
+.navigation {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("../assets/navigation.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: auto auto;
+    background-position: center center;
+}
