@@ -1,13 +1,3 @@
-@charset "UTF-8";
-/* CSS dokument */
-
-/* Chips styling */
-.type-filled,
-.type-filled * {
-    box-sizing: border-box; 
-}
-
-
 /* Chip Container */
 .chip-container {
     display: flex; 
@@ -20,7 +10,7 @@
     padding: 10px; 
 }
 
-.type-filled {
+.chip__filled {
     background: var(--color-surface-brand, #DA291C);
     border: 2px solid var(--color-border-primary, #da291c); 
     border-radius: 20px; 
@@ -35,7 +25,7 @@
 
 
 /* Label styling */
-.type-filled__label {
+.chip__filled__label {
     padding: 0px 0px 4px 0px; 
     display: flex; 
     flex-direction: row; 
@@ -46,135 +36,79 @@
 }
 
 /* Label wrapper styling */
-.type-filled__label-wrapper {
-    display: flex; 
-    flex-direction: row; 
-    gap: 0px; 
-    align-items: flex-start; 
-    justify-content: flex-start; 
-    flex-shrink: 0; 
+.chip__filled__label__wrapper {
+    flex-direction: row;
 }
 
 /* Label 2 styling */
-.type-filled__label2 {
-    color: var(--color-text-on-brand, #f2f2f2); 
+.chip__filled__label2 {
+    color: var(--color__txt__on_brand); 
     text-align: left; 
-    font-family: var(--text-label-small-font-family, "Lato-Regular", sans-serif); 
-    font-size: var(--text-label-small-font-size, 16px); 
-    line-height: var(--text-label-small-line-height, 20px); 
-    font-weight: var(--text-label-small-font-weight, 400); 
 }
 
 /* Hover effekt for chip */
-.type-filled:hover {
-    background: var(--color-surface-brand, #f2f2f2); 
-    border: 2px solid var(--color-border-primary, #2e2e2e);
+.chip__filled:hover {
+    background: var(--color__surface__brand); 
+    border: 2px solid var(--color__border__primary);
 }
 
 /*Hover effekt for indhold af chip*/
-.type-filled:hover .type-filled__label2,
-.type-filled:hover .type-filled__cross { 
-    color: var(--color-text-primary, #2e2e2e);
+.chip__filled:hover .chip__filled__label2,
+.chip__filled:hover { 
+    color: var(--color__txt__primary);
 }
 
 
 
 /* Chip wrapper styling */
 .type-filled__chip-wrapper {
-    display: flex; 
     flex-direction: row; 
     gap: 8px; 
-    align-items: center; 
-    justify-content: flex-start; 
-    align-self: stretch; 
-    flex-shrink: 0; 
+    align-items: center;
 }
-
-/* Cross icon styling */
-
-.type-filled__cross {
-    flex-shrink: 0; 
-    width: var(--dimension-icon-sm, 10px); 
-    height: var(--dimension-icon-sm, 10px); 
-    position: relative; 
-    overflow: visible; 
-    color: var(--color-text-on-brand, #f2f2f2); 
-    transition: color 0.05s; 
-}
-
-
-
-
 
 
 
 
 /* Pagination */
-.pagination,
-.pagination * {
-  box-sizing: border-box; 
-}
 
-.pagination-container {
+
+.pagination__container {
   position: fixed; 
   bottom: 0; 
   left: 0; 
-  right: 0; 
-  padding: var(--spacing__md--desktop); 
-  background-color: var(--color-surface-container-layer1, #f1f0ec); 
-  display: flex; 
+  right: 0;
+  background-color: var(--color__surface__bg);
   justify-content: center; 
-  z-index: 1000; 
+  z-index: 70; 
 }
 
 /* Pagination flexbox */
 .pagination {
-  display: flex;
-  gap: var(--spacing__sm--desktop); 
   align-items: center; 
 }
 
 /* Pagination controls */
-.pagination__pagination-control {
-  background: var(--color-surface-container-layer1, #f1f0ec); 
-  border-radius: 32px; 
-  padding: var(--spacing__xs--desktop); 
-  display: flex; 
+.pagination__pagination__control {
+  background: var(--color__surface__container-layer1); 
+  border-radius: var(--border__radius__full);
   align-items: center; 
-  justify-content: center; 
-  flex-shrink: 0; 
+  justify-content: center;
   width: 32px; 
   height: 32px; 
 
 }
 
-/* Pagination Icon styles */
-.pagination__chevron-left-double,
-.pagination__chevron-left,
-.pagination__chevron-right,
-.pagination__chevron-right-double {
-  flex-shrink: 0; 
-  width: var(--dimension-icon-sm, 16px); 
-  height: var(--dimension-icon-sm, 16px); 
-  position: relative; 
-  overflow: visible;
-}
-
 /* Pagination text styles */
 .pagination__number {
-    color: var(--color-text-primary, #2e2e2e); 
-    text-align: center; 
-    font-family: var(--text-body-small-font-family, "Lato-Regular", sans-serif); 
-    font-size: var(--text-body-small-font-size, 12px); 
-    line-height: var(--text-body-small-line-height, 16px); 
-    font-weight: var(--text-body-small-font-weight, 400); 
+    color: var(--color__txt__primary); 
+    text-align: center;
 }
 
 /* Pagination page numbers */
 .pagination__pagination-page {
-  background: var(--color-surface-container-layer1, #f1f0ec); 
-  border-radius: 32px; 
-  padding: var(--spacing__xs--desktop); 
+  background: var(--color__surface__container-layer1); 
+  border-radius: var(--border__radius__full);
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -185,27 +119,27 @@
 
 /* Hover effects for pagination pages */
 .pagination__pagination-page:hover {
-  background: var(--color-surface-brand, #da291c); 
+  background: var(--color__surface__brand); 
 }
 
 .pagination__pagination-page:hover .pagination__number {
-  color: #ffffff; 
+  color: var(--color__txt__inverted); 
 }
 
 /* Hover effect to icons */
 .pagination__pagination-control:hover {
-  background: var(--color-surface-brand, #da291c); 
+  background: var(--color__surface__brand); 
 }
 
 
 /* Other pagination styles */
 .pagination__number {
-  color: var(--color-text-primary, #2e2e2e); 
+  color: var(--color__txt__primary); 
 }
 
 .pagination__pagination-page3 {
-  background: var(--color-surface-container-layer1, #f1f0ec); 
-  border-radius: 8px; 
+  background: var(--color__surface__container-layer1); 
+  border-radius: var(--border__radius__sm); 
   padding: var(--spacing__xs--desktop); 
   display: flex; 
   align-items: center; 
@@ -226,52 +160,14 @@
 
 
 /*Navigation for desktop*/
-
-body {
-    margin: 0;
-}
-
 .navigation {
     width: 100%;
     height: 50px;
     padding: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     background-image: url("../assets/navigation.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-size: auto auto;
     background-position: center center;
-}
-
-.navigation img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Tablet menu */
-@media only screen and (min-width: 640px) {
-    .navigation {
-        display: none;
-    }
-    header > h1 {
-        display: block;
-    }
-}
-
-/* Desktop menu */
-@media only screen and (min-width: 960px) {
-    .navigation {
-        display: flex;
-    }
-
-    header > h1 {
-        display: none;
-    }
-}
- 
-@media only screen and (min-width: 1280px) {
 }
