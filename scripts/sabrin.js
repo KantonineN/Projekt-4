@@ -48,4 +48,3 @@ checkboxes.forEach(checkbox => {
         }
     });
 });
-
