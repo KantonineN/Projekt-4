@@ -11,8 +11,8 @@
 }
 
 .chip__filled {
-    background: var(--color-surface-brand, #DA291C);
-    border: 2px solid var(--color-border-primary, #da291c); 
+    background: var(--color-surface-brand, #DA291C); 
+    border: 2px solid var(--color-border-primary, #DA291C); 
     border-radius: 20px; 
     padding: 4px 8px;
     display: flex; 
@@ -23,7 +23,6 @@
     height: 32px; 
 }
 
-
 /* Label styling */
 .chip__filled__label {
     padding: 0px 0px 4px 0px; 
@@ -31,8 +30,8 @@
     flex-direction: row; 
     gap: 8px; 
     align-items: center; 
-    justify-content: flex-start; 
-    flex-shrink: 0; 
+    justify-content: flex-start;
+    color: var(--color__base__white1); 
 }
 
 /* Label wrapper styling */
@@ -42,26 +41,27 @@
 
 /* Label 2 styling */
 .chip__filled__label2 {
-    color: var(--color__txt__on_brand); 
+    color: var(--color__base__white1);
     text-align: left; 
 }
 
+
+
 /* Hover effekt for chip */
 .chip__filled:hover {
-    background: var(--color__surface__brand); 
-    border: 2px solid var(--color__border__primary);
+    background: var(--color__surface__bg); 
+    border: 2px solid var(--color__color__brand1);
 }
 
-/*Hover effekt for indhold af chip*/
+/* Hover effekt for label og ikon */
+.chip__filled:hover .chip__filled__label, 
 .chip__filled:hover .chip__filled__label2,
-.chip__filled:hover { 
-    color: var(--color__txt__primary);
+.chip__filled:hover svg { 
+    color: var(--color__color__brand1); 
 }
-
-
 
 /* Chip wrapper styling */
-.type-filled__chip-wrapper {
+.chip__filled__chip-wrapper {
     flex-direction: row; 
     gap: 8px; 
     align-items: center;
@@ -69,9 +69,15 @@
 
 
 
-
 /* Pagination */
 
+.pagination-wrapper{
+    display:flex;
+    justify-self: center;
+    width: var(--scale__800);
+    position: relative;
+    padding: var(--spacing__sm);
+}
 
 .pagination__container {
   position: fixed; 
@@ -80,12 +86,16 @@
   right: 0;
   background-color: var(--color__surface__bg);
   justify-content: center; 
+  padding: var(--spacing__sm--desktop);
   z-index: 70; 
 }
 
 /* Pagination flexbox */
 .pagination {
-  align-items: center; 
+display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing__sm--desktop)
 }
 
 /* Pagination controls */
@@ -94,8 +104,8 @@
   border-radius: var(--border__radius__full);
   align-items: center; 
   justify-content: center;
-  width: 32px; 
-  height: 32px; 
+  width: var(--scale__800); 
+  height: var(--scale__800); 
 
 }
 
@@ -112,9 +122,8 @@
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  flex-shrink: 0; 
-  width: 32px; 
-  height: 32px; 
+  width: var(--scale__800); 
+  height: var(--scale__800); 
 }
 
 /* Hover effects for pagination pages */
@@ -126,11 +135,25 @@
   color: var(--color__txt__inverted); 
 }
 
+
+/* icons size for pagination*/
+.pagination__chevron-left,
+.pagination__chevron-left-double,
+.pagination__chevron-right,
+.pagination__chevron-right-double {
+    width: var(--scale__800);
+    height: var(--scale__800);
+    fill: var(--color__icon__primary);
+}
+
 /* Hover effect to icons */
 .pagination__pagination-control:hover {
   background: var(--color__surface__brand); 
 }
 
+.pagination__pagination-control:hover svg {
+    fill: var(--color__icon__inverted);
+}
 
 /* Other pagination styles */
 .pagination__number {
@@ -144,18 +167,9 @@
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  flex-shrink: 0; 
-  width: 32px; 
-  height: 32px; 
+  width: var(--scale__800); 
+  height: var(--scale__800); 
 }
-
-
-
-
-
-
-/*Bottom sheet*/
-
 
 
 
