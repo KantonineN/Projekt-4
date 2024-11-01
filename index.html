@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <script src="scripts/nikka.js" defer></script>
-    <script src="scripts/maaskeheidi.js" defer></script>
+    <script src="scripts/heidi.js" defer></script>
     <script src="scripts/sabrin.js" defer></script>
 </head>
 <body class="col12">
@@ -384,45 +384,18 @@
                         </button>
                     </div>
                 </div>
-                <div class="card__content">
-                    <button class="btn fab fab--icon shadow__floatingbtn share transition">
-                        <svg class="icon--lg" focusable="false" aria-hidden="true"><use xlink:href="#share"></use></svg>
-                    </button>
-                    <h4>Title</h4>
-                    <label class="label txt__label__sm txt--bold" for="card__content__wrapper">Lokation</label>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#calendar"></use></svg>
-                        <p class="txt__body__sm">Text</p>
-                    </div>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#clock"></use></svg>
-                        <p class="txt__body__sm">Text</p>
-                    </div>
-                    <p class="txt__body__md">
-                        Pleade add your text here. Keep it short and simple
-                    </p>
-                    <button class="btn  btn--transparent txt__btn transition">
-                        Læs mere
-                    </button>
-                </div>
-            </div>
-
+                
                 <!-- Card 2 -->
                 <div class="card shadow__cards col4"
                 data-favorite="false" data-lokation="place" data-interrest="interrest" data-age="age" data-duration="duration">
                     <div class="card__img">
                     <!-- Slideshow container -->
                         <!-- Full-width images -->
-                        <div class="slideshow-container">
-                            <div class="mySlides2 fade">
-                                <img src="image/card 2 - event/boernedisko.jpg" style="width:100%">
-                            </div>
-                            <div class="mySlides2 fade">
-                                <img src="image/card 2 - event/boernediskotek.jpg" style="width:100%">
-                            </div>
-                            <div class="mySlides2 fade">
-                                <img src="image/card 2 - event/diskoforboern.jpg" style="width:100%">
-                            </div>
+                        <div class="slideshow-container card__img">
+                            <img class="mySlides2 fade responsive-img" src="image/card 2 - event/boernedisko.jpg">
+                            <img class="mySlides2 fade responsive-img" src="image/card 2 - event/boernediskotek.jpg">
+                            <img class="mySlides2 fade responsive-img" src="image/card 2 - event/diskoforboern.jpg">
+
                             <!-- The dots/circles -->
                             <div class="dots">
                                 <span class="dot2" onclick="currentSlide(1)"></span>
@@ -458,28 +431,6 @@
                         </button>
                     </div>
                 </div>
-                <div class="card__content">
-                    <button class="btn fab fab--icon shadow__floatingbtn share transition">
-                        <svg class="icon--lg" focusable="false" aria-hidden="true"><use xlink:href="#share"></use></svg>
-                    </button>
-                    <h4>Title</h4>
-                    <label class="label txt__label__sm txt--bold" for="card__content__wrapper">Lokation</label>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm" focusable="false"; aria-hidden="true"><use xlink:href="#calendar"></use></svg>
-                        <p class="txt__body__sm">Text</p>
-                    </div>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm" focusable="false"; aria-hidden="true"><use xlink:href="#clock"></use></svg>
-                        <p class="txt__body__sm">Text</p>
-                    </div>
-                    <p class="txt__body__md">
-                        Pleade add your text here. Keep it short and simple
-                    </p>
-                    <button class="btn  btn--transparent txt__btn transition">
-                        Læs mere
-                    </button>
-                </div>
-            </div>
 
                 <!-- Card 3 -->
                 <div class="card shadow__cards col4"
@@ -488,16 +439,10 @@
 <div class="card__img">
 <!-- Slideshow container -->
                     <!-- Full-width images -->
-                    <div class="slideshow-container">
-                    <div class="mySlides3 fade">
-                            <img src="image/card 3 - jul/julpyssel-for-barn.jpg" style="width:100%">
-                        </div>
-                        <div class="mySlides3 fade">
-                            <img src="image/card 3 - jul/julepige.jpg" style="width:100%">
-                        </div>
-                        <div class="mySlides3 fade">
-                            <img src="image/card 3 - jul/juleklip.jpg" style="width:100%">
-                        </div>
+                    <div class="slideshow-container card__img">
+                        <img class="mySlides3 fade responsive-img" src="image/card 3 - jul/juleklip.jpg">
+                        <img class="mySlides3 fade responsive-img" src="image/card 3 - jul/julepige.jpg">
+                        <img class="mySlides3 fade responsive-img" src="image/card 3 - jul/julpyssel-for-barn.jpg">
                         <!-- The dots/circles -->
                         <div class="dots">
                             <span class="dot3" onclick="currentSlide(1)"></span>
@@ -533,15 +478,7 @@
                             Læs mere
                         </button>
                     </div>
-                    <p class="txt__body__md">
-                        Pleade add your text here. Keep it short and simple
-                    </p>
-                    <button class="btn  btn--transparent txt__btn transition">
-                        Læs mere
-                    </button>
                 </div>
-            </div>
-        </div>
         <div id="tab2" class="tabcontent">
             This is tab 2.
         </div>
