@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <script src="scripts/nikka.js" defer></script>
-    <script src="scripts/maaskeheidi.js" defer></script>
+    <script src="scripts/heidi.js" defer></script>
     <script src="scripts/sabrin.js" defer></script>
 </head>
 <body class="col12">
@@ -329,115 +329,157 @@
             <div id="chipContainer" class="chip-container"></div>
         </div>
         <!-- Tab links -->
-        <div class="tab col4">
-            <button class="tab_item left transition active" onclick="openScript(event, 'tab1')">
-                <h6>Aktiviteter</h6>
-            </button>
-            <button class="tab_item right transition" onclick="openScript(event, 'tab2')">
-                <h6>Kurser</h6>
-            </button>
-        </div>
-        <!-- Tab content -->
-        <div id="tab1" class="tabcontent container">
-            <!-- Card 1 -->
-            <div class="card shadow__cards col4"
-            data-favorite="false" data-lokation="place" data-interrest="interrest" data-age="age" data-duration="duration">
-                <div class="card__img">
-                    <img class="responsive-img" src="url" alt="alternatetext" decoding="async">
-                    <label class="favorite">
-                        <input type="checkbox" value="favorite">
-                        <svg class="icon--lg favorite_item transition" focusable="false" aria-hidden="true"><use xlink:href="#heart"></use></svg>
-                    </label>
-                </div>
-                <div class="card__content">
-                    <button class="btn fab fab--icon shadow__floatingbtn share transition">
-                        <svg class="icon--lg" focusable="false" aria-hidden="true"><use xlink:href="#share"></use></svg>
-                    </button>
-                    <h4>Title</h4>
-                    <label class="label txt__label__sm txt--bold" for="card__content__wrapper">Lokation</label>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#calendar"></use></svg>
-                        <p class="txt__body__sm">Text</p>
-                    </div>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#clock"></use></svg>
-                        <p class="txt__body__sm">Text</p>
-                    </div>
-                    <p class="txt__body__md">
-                        Pleade add your text here. Keep it short and simple
-                    </p>
-                    <button class="btn  btn--transparent txt__btn transition">
-                        Læs mere
-                    </button>
-                </div>
+            <div class="tab col4">
+                <button class="tab_item left transition active" onclick="tabPressed(event, 'tab1')">
+                    <h6>Aktiviteter</h6>
+                </button>
+                <button class="tab_item right transition" onclick="tabPressed(event, 'tab2')">
+                    <h6>Kurser</h6>
+                </button>
             </div>
+            <!-- Tab content -->
+            <div id="tab1" class="tabcontent container">
+                <!-- Card 1 -->
+                <div class="card shadow__cards col4"
+                data-favorite="false" data-lokation="place" data-interrest="interrest" data-age="age" data-duration="duration">
+                    <div class="card__img">
+<!-- Slideshow container -->
+                        <!-- Full-width images -->
+                        <div class="slideshow-container card__img">
+                            <img class="mySlides1 fade responsive-img" src="image/card 1 - mad/at-have-boern-med-madlavning.webp">
+                            <img class="mySlides1 fade responsive-img" src="image/card 1 - mad/boernogmad.jpg">
+                            <img class="mySlides1 fade responsive-img" src="image/card 1 - mad/madplan-boern.avif">
+                            
+                            <!-- The dots/circles -->
+                            <div class="dots">
+                                <span class="dot1" onclick="currentSlide(1)"></span>
+                                <span class="dot1" onclick="currentSlide(2)"></span>
+                                <span class="dot1" onclick="currentSlide(3)"></span>
+                            </div>  
+                        </div>                  
+                        <label class="favorite">
+                            <input type="checkbox" value="favorite">
+                            <svg class="icon--lg favorite_item transition" focusable="false" aria-hidden="true"><use xlink:href="#heart"></use></svg>
+                        </label>
+                    </div>
+                    <div class="card__content">
+                        <button class="btn fab fab--icon shadow__floatingbtn share transition">
+                            <svg class="icon--lg" focusable="false" aria-hidden="true"><use xlink:href="#share"></use></svg>
+                        </button>
+                        <h4>Madlavning for børn</h4>
+                        <label class="label txt__label__sm txt--bold" for="card__content__wrapper">Nyborg</label>
+                        <div class="card__content__wrapper">
+                            <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#calendar"></use></svg>
+                            <p class="txt__body__sm">10.11.2024</p>
+                        </div>
+                        <div class="card__content__wrapper">
+                            <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#clock"></use></svg>
+                            <p class="txt__body__sm">16.00-19.00</p>
+                        </div>
+                        <p class="txt__body__md">
+                            Bliv frivillig til vores madlavningsevent for børn! Hjælp dem med at lave mad, smage nye retter og få selvtillid i køkkenet. 
+                            Del din madglæde og giv børn en sjov oplevelse!
+                        </p>
+                        <button class="btn  btn--transparent txt__btn transition">
+                            Læs mere
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card shadow__cards col4"
+                data-favorite="false" data-lokation="place" data-interrest="interrest" data-age="age" data-duration="duration">
+                    <div class="card__img">
+                    <!-- Slideshow container -->
+                        <!-- Full-width images -->
+                        <div class="slideshow-container card__img">
+                            <img class="mySlides2 fade responsive-img" src="image/card 2 - event/boernedisko.jpg">
+                            <img class="mySlides2 fade responsive-img" src="image/card 2 - event/boernediskotek.jpg">
+                            <img class="mySlides2 fade responsive-img" src="image/card 2 - event/diskoforboern.jpg">
 
-            <!-- Card 2 -->
-            <div class="card shadow__cards col4"
-            data-favorite="false" data-lokation="place" data-interrest="interrest" data-age="age" data-duration="duration">
-                <div class="card__img">
-                    <img class="responsive-img" src="url" alt="alternatetext" decoding="async">
-                    <label class="favorite">
-                        <input type="checkbox" value="favorite">
-                        <svg class="icon--lg favorite_item transition" focusable="false" aria-hidden="true"><use xlink:href="#heart"></use></svg>
-                    </label>
-                </div>
-                <div class="card__content">
-                    <button class="btn fab fab--icon shadow__floatingbtn share transition">
-                        <svg class="icon--lg" focusable="false" aria-hidden="true"><use xlink:href="#share"></use></svg>
-                    </button>
-                    <h4>Title</h4>
-                    <label class="label txt__label__sm txt--bold" for="card__content__wrapper">Lokation</label>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm" focusable="false"; aria-hidden="true"><use xlink:href="#calendar"></use></svg>
-                        <p class="txt__body__sm">Text</p>
+                            <!-- The dots/circles -->
+                            <div class="dots">
+                                <span class="dot2" onclick="currentSlide(1)"></span>
+                                <span class="dot2" onclick="currentSlide(2)"></span>
+                                <span class="dot2" onclick="currentSlide(3)"></span>
+                            </div>  
+                            </div>   
+                        <label class="favorite">
+                            <input type="checkbox" value="favorite">
+                            <svg class="icon--lg favorite_item transition" focusable="false" aria-hidden="true"><use xlink:href="#heart"></use></svg>
+                        </label>
                     </div>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm" focusable="false"; aria-hidden="true"><use xlink:href="#clock"></use></svg>
-                        <p class="txt__body__sm">Text</p>
+                    <div class="card__content">
+                        <button class="btn fab fab--icon shadow__floatingbtn share transition">
+                            <svg class="icon--lg" focusable="false" aria-hidden="true"><use xlink:href="#share"></use></svg>
+                        </button>
+                        <h4>Sodavandsdiskotek</h4>
+                        <label class="label txt__label__sm txt--bold" for="card__content__wrapper">Århus</label>
+                        <div class="card__content__wrapper">
+                            <svg class="icon--sm" focusable="false"; aria-hidden="true"><use xlink:href="#calendar"></use></svg>
+                            <p class="txt__body__sm">15.11.2024</p>
+                        </div>
+                        <div class="card__content__wrapper">
+                            <svg class="icon--sm" focusable="false"; aria-hidden="true"><use xlink:href="#clock"></use></svg>
+                            <p class="txt__body__sm">18.30-21.00</p>
+                        </div>
+                        <p class="txt__body__md">
+                            Være med til vores sodavandsdiskotek for børn. 
+                            Hjælp med at skabe en sjov og sikker atmosfære, hvor børnene kan danse og lege uden alkohol.
+                        </p>
+                        <button class="btn  btn--transparent txt__btn transition">
+                            Læs mere
+                        </button>
                     </div>
-                    <p class="txt__body__md">
-                        Pleade add your text here. Keep it short and simple
-                    </p>
-                    <button class="btn  btn--transparent txt__btn transition">
-                        Læs mere
-                    </button>
                 </div>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="card shadow__cards col4"
-            data-favorite="false" data-lokation="place" data-interrest="interrest" data-age="age" data-duration="duration">
-                <div class="card__img">
-                    <img class="responsive-img" src="url" alt="alternatetext" decoding="async">
+                <!-- Card 3 -->
+                <div class="card shadow__cards col4"
+                data-favorite="false" data-lokation="place" data-interrest="interrest" data-age="age" data-duration="duration">
+                    <div class="card__img">
+<div class="card__img">
+<!-- Slideshow container -->
+                    <!-- Full-width images -->
+                    <div class="slideshow-container card__img">
+                        <img class="mySlides3 fade responsive-img" src="image/card 3 - jul/juleklip.jpg">
+                        <img class="mySlides3 fade responsive-img" src="image/card 3 - jul/julepige.jpg">
+                        <img class="mySlides3 fade responsive-img" src="image/card 3 - jul/julpyssel-for-barn.jpg">
+                        <!-- The dots/circles -->
+                        <div class="dots">
+                            <span class="dot3" onclick="currentSlide(1)"></span>
+                            <span class="dot3" onclick="currentSlide(2)"></span>
+                            <span class="dot3" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                    </div>
                     <label class="favorite">
                         <input type="checkbox" value="favorite">
                         <svg class="icon--lg favorite_item transition" focusable="false" aria-hidden="true"><use xlink:href="#heart"></use></svg>
                     </label>
-                </div>
-                <div class="card__content">
-                    <button class="btn fab fab--icon shadow__floatingbtn share transition">
-                        <svg class="icon--lg" focusable="false" aria-hidden="true"><use xlink:href="#share"></use></svg>
-                    </button>
-                    <h4>Title</h4>
-                    <label class="label txt__label__sm txt--bold" for="card__content__wrapper">Lokation</label>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#calendar"></use></svg>
-                        <p class="txt__body__sm">Text</p>
                     </div>
-                    <div class="card__content__wrapper">
-                        <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#clock"></use></svg>
-                        <p class="txt__body__sm">Text</p>
+                    <div class="card__content">
+                        <button class="btn fab fab--icon shadow__floatingbtn share transition">
+                            <svg class="icon--lg" focusable="false" aria-hidden="true"><use xlink:href="#share"></use></svg>
+                        </button>
+                        <h4>Julehygge</h4>
+                        <label class="label txt__label__sm txt--bold" for="card__content__wrapper">Odense</label>
+                        <div class="card__content__wrapper">
+                            <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#calendar"></use></svg>
+                            <p class="txt__body__sm">7.10.2024</p>
+                        </div>
+                        <div class="card__content__wrapper">
+                            <svg class="icon--sm icon-svg" focusable="false"; aria-hidden="true"><use xlink:href="#clock"></use></svg>
+                            <p class="txt__body__sm">12.00-16.00</p>
+                        </div>
+                        <p class="txt__body__md">
+                            Bliv frivillig til vores juleevent for børn! 
+                            Hjælp med julepynt, småkager og masser af hygge og gør deres jul ekstra magisk!
+                        </p>
+                        <button class="btn  btn--transparent txt__btn transition">
+                            Læs mere
+                        </button>
                     </div>
-                    <p class="txt__body__md">
-                        Pleade add your text here. Keep it short and simple
-                    </p>
-                    <button class="btn  btn--transparent txt__btn transition">
-                        Læs mere
-                    </button>
                 </div>
-            </div>
-        </div>
         <div id="tab2" class="tabcontent">
             This is tab 2.
         </div>
