@@ -429,44 +429,43 @@ svg {
 }
 
 
+
+
+
+
+
 /* Chips styling */
 .type-filled,
 .type-filled * {
     box-sizing: border-box; 
 }
 
+
 /* Chip Container */
 .chip-container {
     display: flex; 
     flex-direction: row; 
     gap: 12px; 
-    position: relative; 
-    top: 100px; 
-    left: 40px; 
-    border: 2px solid red; 
+    position: flex; 
+    top: 20px; 
+    left: 0; 
     border-radius: 5px; 
     padding: 10px; 
 }
 
 .type-filled {
-    background: var(--color-surface-brand, #DA291C); 
+    background: var(--color-surface-brand, #DA291C);
+    border: 2px solid var(--color-border-primary, #da291c); 
     border-radius: 20px; 
-    padding: var(--scale__200) var(--scale__400);
+    padding: 4px 8px;
     display: flex; 
     flex-direction: row; 
     gap: 4px; 
     align-items: center; 
     justify-content: space-between; 
     height: 32px; 
-    position: relative; 
-
 }
 
-/* Hover effekt for chip*/
-.type-filled:hover {
-    background: var(--color-surface-brand, #f2f2f2); 
-    border: 2px solid #da291c; 
-}
 
 /* Label styling */
 .type-filled__label {
@@ -499,10 +498,19 @@ svg {
     font-weight: var(--text-label-small-font-weight, 400); 
 }
 
-/* Hover effekt*/
-.type-filled:hover .type-filled__label2 {
-    color: var(--color-text-on-brand, #da291c); 
+/* Hover effekt for chip */
+.type-filled:hover {
+    background: var(--color-surface-brand, #f2f2f2); 
+    border: 2px solid var(--color-border-primary, #2e2e2e);
 }
+
+/*Hover effekt for indhold af chip*/
+.type-filled:hover .type-filled__label2,
+.type-filled:hover .type-filled__cross { 
+    color: var(--color-text-primary, #2e2e2e);
+}
+
+
 
 /* Chip wrapper styling */
 .type-filled__chip-wrapper {
@@ -516,13 +524,21 @@ svg {
 }
 
 /* Cross icon styling */
+
 .type-filled__cross {
     flex-shrink: 0; 
-    width: var(--dimension-icon-sm, 16px); 
-    height: var(--dimension-icon-sm, 16px); 
+    width: var(--dimension-icon-sm, 10px); 
+    height: var(--dimension-icon-sm, 10px); 
     position: relative; 
     overflow: visible; 
+    color: var(--color-text-on-brand, #f2f2f2); 
+    transition: color 0.05s; 
 }
+
+
+
+
+
 
 
 
