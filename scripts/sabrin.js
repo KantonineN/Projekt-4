@@ -15,10 +15,10 @@ checkboxes.forEach(checkbox => {
             chip.innerHTML = `
                  <div class="chip__filled__label">
                     <div class="chip__filled__label__wrapper">
-                        <div class="type-filled__label2">${this.getAttribute('data-name')}</div>
+                        <div class="chip-filled__label2">${this.getAttribute('data-name')}</div>
                     </div>
                 </div>
-                <div class="type-filled__chip-wrapper">
+                <div class="chip-filled__chip-wrapper">
                     <svg class="icon--sm">
                         <use xlink:href="#cross"></use>
                     </svg>
