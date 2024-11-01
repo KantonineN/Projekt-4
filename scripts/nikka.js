@@ -1,4 +1,4 @@
-function tabPresser(evt, tabName) {
+function tabPressed(evt, tabName) {
     /* Get all elements with class="tabcontent" and hide them
     Hides content on all the different tabs */
     const tabcontent = document.getElementsByClassName("tabcontent");
