@@ -13,14 +13,13 @@ checkboxes.forEach(checkbox => {
             const chip = document.createElement('div');
             chip.className = 'chip__filled';
             chip.innerHTML = `
-                  <div class="chip__filled__label">
-                    <div class=".chip__filled__label__wrapper">
+                 <div class="chip__filled__label">
+                    <div class="chip__filled__label__wrapper">
                         <div class="type-filled__label2">${this.getAttribute('data-name')}</div>
                     </div>
                 </div>
                 <div class="type-filled__chip-wrapper">
-                    <!-- Tilføjet krydsikon til chippen for at muliggøre fjernelse -->
-                    <svg class="type-filled__cross" focusable="false" aria-hidden="true">
+                    <svg class="icon--sm">
                         <use xlink:href="#cross"></use>
                     </svg>
                 </div>
@@ -30,7 +29,7 @@ checkboxes.forEach(checkbox => {
             chipContainer.appendChild(chip);
 
             // Find cross icon i chippen
-            const crossIcon = chip.querySelector('.type-filled__cross');
+            const crossIcon = chip.querySelector('.icon--sm');
             crossIcon.addEventListener('click', () => {
                 
                 chipContainer.removeChild(chip);
@@ -40,7 +39,7 @@ checkboxes.forEach(checkbox => {
 
         } else {
             // Hvis checkboxen bliver afmarkeret
-            const chips = chipContainer.getElementsByClassName('chip');
+            const chips = chipContainer.getElementsByClassName('chip__filled');
             for (let i = 0; i < chips.length; i++) {
                 // Hvis chippen matcher checkboxens navn
                 if (chips[i].querySelector('.chip__filled__label2').textContent === this.getAttribute('data-name')) {
